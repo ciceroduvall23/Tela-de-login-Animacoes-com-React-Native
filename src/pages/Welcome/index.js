@@ -25,13 +25,12 @@ export default function Welcome() {
       />
         </View>
         <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
-          <Text style={styles.tittle}>Monitore,Organize seus gastos de qualquer lugar</Text>
+          <Text style={styles.title}>Monitore,Organize seus gastos de qualquer lugar</Text>
           <Text style={styles.text}>Faça o login para começar</Text>
 
-         <TouchableOpacity 
+         <TouchableOpacity
          style={styles.button}
-         onPress={ () => navigation.navigate('SingIn')}
-         >
+         onPress={ () => navigation.navigate('SingIn')}>
          <Text style={styles.buttonText}>Acessar</Text>
          </TouchableOpacity>
         </Animatable.View>
@@ -60,7 +59,7 @@ containerForm:{
   paddingEnd:'5%'
 },
 title:{
-  fontSize:4,
+  fontSize:20,
   marginTop:28,
   fontWeight:'700',
 

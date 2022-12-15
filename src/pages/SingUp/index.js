@@ -1,18 +1,34 @@
+
+
 import React from 'react';
 import { View,Text,StyleSheet,TextInput,TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+
 import * as Animatable from 'react-native-animatable'  /*biblioteca de animação durante a transição de telas */
-export default function SingIn() {
+export default function SingUp() {
   const navigation = useNavigation();
  return (
     <View style={styles.container}>
       <Animatable.View animation="fadeInLeft" delay={500} style={styles.containerHeader}>
-        <Text style={styles.message}>Bem-vindo</Text>
+        <Text style={styles.message}>Criar conta</Text>
       </Animatable.View>
+   
 
       <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-        <Text style={styles.title}>Email</Text>
+        <Text style={styles.title}>Nome</Text>
+        <TextInput
+        placeholder="Digite Seu nome..."
+        style={styles.input}
+        />
+
+<Text style={styles.title}>Sobrenome</Text>
+        <TextInput
+        placeholder="Digite seu sobrenome..."
+        style={styles.input}
+        />
+
+<Text style={styles.title}>Email</Text>
         <TextInput
         placeholder="Digite um email..."
         style={styles.input}
@@ -27,11 +43,11 @@ export default function SingIn() {
         <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Acessar</Text>
         </TouchableOpacity>
- 
-        <TouchableOpacity style={styles.buttonRegister}
-        onPress={ () => navigation.navigate('SingUp')}>
        
-        <Text style={styles.registerText}>Não possui uma conta? Cadastre-se</Text>
+        <TouchableOpacity style={styles.buttonRegister}>
+        <Text style={styles.registerText}>Já possui uma conta?</Text>
+        <Text style={styles.registerText}
+          onPress={ () => navigation.navigate('SingIn')}> Fazer Login</Text>
         </TouchableOpacity>
 
       </Animatable.View>
@@ -66,7 +82,7 @@ const styles = StyleSheet.create({
     paddingEnd:'5%'
   },
 title:{
-  fontSize:20,
+  fontSize:18,
   marginTop:28,
 },
 input:{
@@ -94,11 +110,9 @@ buttonText:{
 buttonRegister:{
 marginTop:14,
 alignSelf:'center',
-
 },
 registerText:{
- 
-  color:'black',
+  color:'black'
 }
 
 })
