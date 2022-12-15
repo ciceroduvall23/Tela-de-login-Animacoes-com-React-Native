@@ -60,13 +60,16 @@ containerForm:{
   paddingEnd:'5%'
 },
 title:{
-  fontSize:24,
-  fontWeight:'bold',
+  fontSize:4,
   marginTop:28,
-  marginBottom:12,
+  fontWeight:'700',
+
+ 
 },
 text:{
-  color:'#a1a1a1'
+  color:'#a1a1a1',
+  marginTop:78,
+  textAlign:'center'
 },
 button:{
   position:'absolute',
@@ -80,6 +83,8 @@ button:{
 buttonText:{
   fontSize:18,
   color:'#fff',
+  textAlign:'center',
+  alignItems:'center',
   fontWeight:'bold'
 }
 })
